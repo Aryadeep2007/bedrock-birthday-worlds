@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Birthday World Configuration",
+  "description": "Configuration for personalized birthday world. Copy this file and fill in your details. NEVER commit personal data to the public repository.",
+  "type": "object",
+  "properties": {
+    "birthdayPerson": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the birthday person (used in world title, signs, book, etc.)",
+          "examples": ["Ujan"]
+        },
+        "age": {
+          "type": "integer",
+          "description": "Age they are turning",
+          "minimum": 1,
+          "maximum": 120,
+          "examples": [14]
+        },
+        "birthDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Birth date in YYYY-MM-DD format",
+          "examples": ["2012-10-31"]
+        }
+      },
+      "required": ["name", "age", "birthDate"]
+    },
+    "world": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "World title shown in Minecraft",
+          "examples": ["Happy Birthday Ujan"]
+        },
+        "description": {
+          "type": "string",
+          "description": "World description shown in Minecraft",
+          "examples": ["A personalized birthday adventure world for Ujan's 14th birthday"]
+        },
+        "spawnCoordinates": {
+          "type": "object",
+          "properties": {
+            "x": { "type": "number", "examples": [0] },
+            "y": { "type": "number", "examples": [64] },
+            "z": { "type": "number", "examples": [0] }
+          },
+          "required": ["x", "y", "z"]
+        }
+      },
+      "required": ["title", "description", "spawnCoordinates"]
+    },
+    "personalAssets": {
+      "type": "object",
+      "description": "Paths to personal assets (PRIVATE - never commit to public repo)",
+      "properties": {
+        "photosDirectory": {
+          "type": "string",
+          "description": "Directory containing birthday person's photos (JPG/PNG)",
+          "examples": ["../private-assets/photos/"]
+        },
+        "voiceMessagePath": {
+          "type": "string",
+          "description": "Path to voice message file (.ogg format)",
+          "examples": ["../private-assets/audio/birthday_message.ogg"]
+        },
+        "personalLetter": {
+          "type": "string",
+          "description": "Personal birthday letter text (will be placed in a book in-game)",
+          "examples": ["Happy Birthday Ujan! ..."]
+        }
+      }
+    },
+    "gallery": {
+      "type": "object",
+      "properties": {
+        "maxPhotos": {
+          "type": "integer",
+          "description": "Maximum number of photos to include in gallery",
+          "default": 19,
+          "minimum": 1,
+          "maximum": 50
+        },
+        "pixelArtScale": {
+          "type": "integer",
+          "description": "Scale factor for photo-to-pixel-art conversion",
+          "default": 1,
+          "minimum": 1,
+          "maximum": 4
+        }
+      }
+    },
+    "gifts": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "description": "Number of hidden birthday gifts",
+          "default": 14,
+          "minimum": 1,
+          "maximum": 64
+        },
+        "giftTypes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Types of gifts to include",
+          "default": ["diamond", "emerald", "golden_apple", "enchanted_book", "firework_rocket", "custom_head"]
+        }
+      }
+    },
+    "treasureHunt": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean", "default": true },
+        "clueCount": { "type": "integer", "default": 7, "minimum": 3, "maximum": 20 }
+      }
+    },
+    "audio": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean", "default": true },
+        "volume": { "type": "number", "default": 1.0, "minimum": 0.1, "maximum": 1.0 }
+      }
+    },
+    "fireworks": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean", "default": true },
+        "showAtSpawn": { "type": "boolean", "default": true },
+        "showAtFinale": { "type": "boolean", "default": true }
+      }
+    }
+  },
+  "required": ["birthdayPerson", "world"]
+}

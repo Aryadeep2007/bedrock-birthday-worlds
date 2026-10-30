@@ -1,0 +1,70 @@
+{
+  "birthday_message": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "birthday_message",
+        "stream": true
+      }
+    ]
+  },
+  "birthday_firework_launch": {
+    "category": "friendly",
+    "sounds": [
+      {
+        "name": "birthday_firework_launch",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "birthday_firework_explode": {
+    "category": "friendly",
+    "sounds": [
+      {
+        "name": "birthday_firework_explode",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "birthday_gift_found": {
+    "category": "friendly",
+    "sounds": [
+      {
+        "name": "birthday_gift_found",
+        "volume": 0.8,
+        "pitch": 1.2
+      }
+    ]
+  },
+  "birthday_treasure_clue": {
+    "category": "friendly",
+    "sounds": [
+      {
+        "name": "birthday_treasure_clue",
+        "volume": 0.7,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "birthday_cake_interact": {
+    "category": "friendly",
+    "sounds": [
+      {
+        "name": "birthday_cake_interact",
+        "volume": 0.6,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "birthday_celebration_music": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "birthday_celebration_music",
+        "stream": true
+      }
+    ]
+  }
+}

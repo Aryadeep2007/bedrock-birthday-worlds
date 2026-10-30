@@ -1,0 +1,18 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Birthday World Resource Pack - Custom textures, sounds, and models",
+    "name": "Birthday World Resources",
+    "uuid": "REPLACE_WITH_RESOURCE_PACK_UUID",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 26, 60]
+  },
+  "modules": [
+    {
+      "description": "Birthday World Resources",
+      "type": "resources",
+      "uuid": "REPLACE_WITH_RESOURCE_PACK_MODULE_UUID",
+      "version": [1, 0, 0]
+    }
+  ]
+}

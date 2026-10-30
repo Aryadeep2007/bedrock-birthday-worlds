@@ -1,0 +1,42 @@
+# Private assets - NEVER COMMIT THESE
+private-assets/
+private-builds/
+personal-config/
+*.mcworld
+
+# Personal configuration
+config/birthday-*.json
+!config/birthday.json
+!config/birthday.schema.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+venv/
+env/
+.env
+
+# Node
+node_modules/
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build outputs
+build/
+dist/
+*.zip
+
+# Original personal assets (outside repo)
+pics/
+audio/

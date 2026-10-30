@@ -1,0 +1,37 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Birthday World Behavior Pack - Custom scripts and gameplay logic",
+    "name": "Birthday World Behavior",
+    "uuid": "REPLACE_WITH_BEHAVIOR_PACK_UUID",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 26, 60]
+  },
+  "capabilities": ["script_eval"],
+  "modules": [
+    {
+      "description": "Birthday World Scripts",
+      "type": "script",
+      "language": "javascript",
+      "uuid": "REPLACE_WITH_BEHAVIOR_PACK_MODULE_UUID",
+      "version": [1, 0, 0],
+      "entry": "scripts/main.js"
+    },
+    {
+      "description": "Birthday World Data",
+      "type": "data",
+      "uuid": "REPLACE_WITH_BEHAVIOR_PACK_DATA_UUID",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.11.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.7.0"
+    }
+  ]
+}
